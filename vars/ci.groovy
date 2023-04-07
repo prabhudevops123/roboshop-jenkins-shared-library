@@ -44,20 +44,20 @@ def call() {
                 }
             }
 
-//            stage('Code Quality') {
-//                steps {
-//                    script {
-//                        common.codequality()
-//                    }
-//                }
-//            }
+            stage('Code Quality') {
+                steps {
+                    script {
+                        common.codequality()
+                    }
+                }
+            }
         }
 
-//        post {
-//            failure {
-//                mail body: "<h1>${component} - Pipeline Failed \n ${BUILD_URL}</h1>", from: 'raghudevopsb71@gmail.com', subject: "${component} - Pipeline Failed", to: 'raghudevopsb71@gmail.com',  mimeType: 'text/html'
-//            }
-//        }
+        post {
+            failure {
+                mail body: "<h1>${component} - Pipeline Failed \n ${BUILD_URL}</h1>", from: 'prabh.rao@gmail.com', subject: "${component} - Pipeline Failed", to: 'prabh.rao@gmail.com',  mimeType: 'text/html'
+            }
+        }
 
     }
 }
