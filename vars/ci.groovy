@@ -30,7 +30,7 @@ def call() {
 
             stage('Compile/Build') {
                 steps {
-                    sh 'exit 1'
+                  //  sh 'exit 1'
                   //  mail bcc: '', body: 'Test', cc: '', from: 'prabh.rao@gmail.com', replyTo: '', subject: 'Test', to: 'prabh.rao@gmail.com'
                     script {
                         common.compile()
